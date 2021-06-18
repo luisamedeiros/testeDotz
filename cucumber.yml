@@ -1,0 +1,10 @@
+default: -p html_report -p dev
+
+###AMBIENTE###
+
+dev: AMBIENTE=dev
+hml: AMBIENTE=hml
+
+### REPORT ###
+
+html_report: --format pretty -f html -o reports/features_report.html
