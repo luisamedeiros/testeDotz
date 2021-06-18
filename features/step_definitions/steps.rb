@@ -27,12 +27,12 @@ Então('retorno o valor {int} em count') do |count|
 end
   
 Quando('insiro valor {int} em count') do |count_incorreto|
-    expect(@request_planets.parsed_response["count"]).not_to eq count_incorreto
+    expect(@request_planets.parsed_response["count"]).to eq count_incorreto
     puts count_incorreto
 end
   
 Então('valido status code {int} e mensagem') do |status_code|
-    expect(@request_planets.code).to eq status_code
+    expect(@request_planets.code).not_to eq status_code
     expect(@request_planets.message).not_to be_empty
 
     end
